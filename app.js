@@ -7,10 +7,6 @@ const cookieParser = require('cookie-parser')
 const port = process.env.PORT || 3000
 const projectRoutes = require("./api/routes/projectRoutes");
 
-// const projectRoutes = require("./api/routes/projectRoutes");
-// const dashboardRoutes = require("./client/routes/dashboardRoutes");
-// const User = require("./api/routes/user_routes");
-
 const uri = "mongodb://127.0.0.1:27017/local";
 mongoose.connect(uri, { useNewUrlParser: true });
 const db = mongoose.connection;
@@ -47,8 +43,9 @@ app.get("/doubts", (req, res) => {
   res.render('doubts.html')
 })
 
-// app.use("/dashboard/", dashboardRoutes);
-// app.use("/projectRoutes/", projectRoutes);
+app.get("/contact_now", (req, res) => {
+  res.render('contact_now.html')
+})
 
 app.use((req, res, next) => {
   const error = new Error("Not found");

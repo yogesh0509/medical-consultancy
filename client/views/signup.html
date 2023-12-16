@@ -118,7 +118,7 @@
         fetch("/projectRoutes/signup", params).then(response => response.json())
           .then((data) => {
             console.log(data)
-            //window.location.pathname = "/"
+            window.location.pathname = "/"
           });
       }
     }
@@ -134,33 +134,9 @@
 </head>
 
 <body>
-  <!-- <div>
-
-    <p style="font-size: 30px; float: left;">
-      <b>
-
-        NAME & LOGO
-      </b>
-    </p>
-  </div>
   <div>
-
-    <bR>
-    <p style="float: right;">
-
-      <a href="MAIN.html">
-        <button class="GFG">
-          Home
-        </button>
-      </a>
-
-    </p>
-  </div> -->
-  <div>
-
     <p style="font-size: larger; float: left;">
         <b>
-
         <img src="https://www.belluber.co.uk/wp-content/uploads/2016/01/logo-05.png " style="height: 150px; width: 250px;" alt="img not found">
         </b>
     </p>
@@ -171,20 +147,10 @@
     <bR>
     
     <p style="float: right;">
-        <!-- <BUTTON class="btn firststep">Home</BUTTON>
-        <a href="MAIN.html">
-            <button class="GFG">
-                Home
-            </button>
-        </a> -->
-        <button type="button" class="btn btn-secondary" style="margin-right: 20px;">Home</button>
+        <button type="button" class="btn btn-secondary" style="margin-right: 20px;" onclick="window.location.pathname='/'">Home</button>
     </p>
 </div>
   <div id="main">
-    <div class="h-tag">
-      <h2 style="text-align: center; font-size: 40px;"><i>DOCTOR'S SIGNUP</i></h2>
-    </div>
-
     <div class="login" style="font-size: 40px;">
       <table cellspacing="2" ; align="center" cellpadding="8" ; border="0">
         <tr>
@@ -226,7 +192,7 @@
       <b>
 
         Already have an account
-        <a href="http://127.0.0.1:5500/Login.html">Login here </a>
+        <a href="/login">Login here </a>
       </b>
     </h2>
 
